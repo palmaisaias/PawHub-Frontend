@@ -80,8 +80,8 @@ function EnhancedOffcanvas({ showMenu, handleMenuToggle }) {
             </Button>
           </li>
           <li>
-            <Button variant="link" onClick={() => alert('Logout Clicked')} className="d-flex align-items-center">
-              Logout
+            <Button variant="link" onClick={() => alert('Logout Clicked')} className="logout-menu d-flex align-items-center">
+              logout
             </Button>
           </li>
         </ul>

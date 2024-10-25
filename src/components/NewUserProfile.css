@@ -86,3 +86,18 @@ body {
   text-decoration: none;
   font-family: 'Raleway';
 }
+
+.push-menu:hover {
+  color: #fff1de; /* Changes text color on hover */
+}
+
+.logout-menu {
+  color: brown;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Raleway';
+}
+
+.logout-menu:hover {
+  color: #fff1de; /* Changes text color on hover */
+}
