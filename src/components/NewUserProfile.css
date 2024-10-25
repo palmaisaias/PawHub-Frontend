@@ -68,7 +68,17 @@ body {
 
 .me-2 {
   color: #cba07a;
-  font-size: 24px;
+  font-size: 20px;
+  background-color:#fff1de;
+  border: 2px solid #cba07a; /* Circular border */
+  border-radius: 50%; /* Makes the shape circular */
+  padding: 6px; /* Adjust padding to control circle size */
+  display: inline-flex; /* Centers the icon inside the circle */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  width: 40px; /* Sets a fixed width for the circle */
+  height: 40px; /* Sets a fixed height for the circle */
+  box-sizing: border-box; /* Ensures padding and border don’t exceed the element's dimensions */
 }
 
 .push-menu {
