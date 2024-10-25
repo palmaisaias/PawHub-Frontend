@@ -1,0 +1,77 @@
+/* ProfileContainer */
+.profile-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(169, 60, 60, 0.9); /* Light white with slight transparency */
+  border-radius: 15px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  backdrop-filter: blur(
+    10px
+  ); /* Optional: blurs the background slightly for better contrast */
+}
+
+/* Optional: Add hover effect */
+.profile-container:hover {
+  transform: scale(1.01); /* Slight scale effect on hover */
+  transition: transform 0.2s ease; /* Smooth transition for the hover effect */
+}
+
+/* HeroSection */
+.hero-section {
+  position: relative;
+  text-align: center;
+}
+
+/* BackgroundImage */
+.background-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+/* ProfilePicture */
+.profile-picture {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will ensure the image covers the entire area */
+  object-position: center; /* Center the image within the circle */
+}
+
+/* UserInfoBox */
+.user-info-box {
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* SocialIcons */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons > * {
+  margin: 0 10px;
+}
+
+/* AdditionalInfo */
+.additional-info {
+  margin-top: 20px;
+}
+
+/* InfoRow */
+.info-row {
+  margin-bottom: 10px;
+}

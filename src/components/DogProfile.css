@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i&display=swap');
+
+:root {
+  --primary-color: #17a2b8 !important; /* Bootstrap info color */
+  --secondary-color: #6c757d !important; /* Bootstrap secondary color */
+  --background-color: #f8f9fa !important; /* Bootstrap light color */
+  --text-color: #343a40 !important; /* Bootstrap dark color */
+  --font-primary: 'Roboto', sans-serif !important;
+  --font-secondary: 'Open Sans', sans-serif !important;
+  --font-serif: 'Lora', serif !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+  }
+  to {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+@keyframes shine {
+  from {
+    transform: rotate(45deg) translateX(-100%) !important;
+  }
+  to {
+    transform: rotate(45deg) translateX(100%) !important;
+  }
+}
+
+.custom-body {
+  background-image: linear-gradient(rgba(168, 33, 33, 0.8), rgba(255,255,255,0.8)), url('https://marketplace.canva.com/EAFE-Cl36SI/2/0/900w/canva-dogs-phone-wallpaper-xU673a7YtPU.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  font-family: var(--font-secondary) !important;
+  color: var(--text-color) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+}
+
+.dog-profile-container {
+  max-width: 1000px !important;
+  margin: auto !important;
+  padding: 30px !important;
+  background-color: rgba(130, 70, 70, 0.85) !important;
+  border-radius: 15px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease-out bot;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+}
+
+.dog-profile-container::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 100% !important;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.2), transparent 70%) !important;
+  transform: rotate(45deg) !important;
+  animation: shine 3s infinite linear !important;
+}
+
+.dog-profile-container:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dog-photo {
+  width: 200px !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  border: 8px solid #fff !important;
+  border-radius: 50% !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2) !important;
+  transition: transform 0.4s ease !important;
+}
+
+.dog-photo:hover {
+  transform: rotate(-5deg) scale(1.05) !important;
+}
+
+.text-primary {
+  font-family: var(--font-primary) !important;
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+  color: var(--primary-color) !important;
+  text-align: center !important;
+  margin-bottom: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+}
+
+.text-muted {
+  font-family: var(--font-secondary) !important;
+  font-size: 0.95rem !important;
+  color: var(--secondary-color) !important;
+  margin-bottom: 15px !important;
+  text-align: center !important;
+}
+
+.dog-description {
+  font-family: var(--font-serif) !important;
+  font-style: italic !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  color: var(--text-color) !important;
+  margin: 20px 0 !important;
+  text-align: justify !important;
+  position: relative !important;
+}
+
+.dog-description::before, .dog-description::after {
+  content: '"' !important;
+  font-size: 2rem !important;
+  color: var(--primary-color) !important;
+  position: absolute !important;
+}
+
+.dog-description::before {
+  top: -10px !important;
+  left: -10px !important;
+}
+
+.dog-description::after {
+  bottom: -10px !important;
+  right: -10px !important;
+}
+
+.dog-traits h5,
+.dog-medications h4 {
+  font-family: var(--font-primary) !important;
+  color: var(--secondary-color) !important;
+  text-align: center !important;
+  margin-top: 30px !important;
+  margin-bottom: 15px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  position: relative !important;
+}
+
+.dog-traits h5::after,
+.dog-medications h4::after {
+  content: '' !important;
+  width: 50px !important;
+  height: 2px !important;
+  background-color: var(--primary-color) !important;
+  position: absolute !important;
+  bottom: -5px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.list-group-item {
+  font-family: var(--font-secondary) !important;
+  background-color: transparent !important;
+  padding: 0.7rem 1.2rem !important;
+  transition: background-color 0.3s ease, padding-left 0.3s ease !important;
+  border: none !important;
+  position: relative !important;
+}
+
+.list-group-item::before {
+  content: '•' !important;
+  color: var(--primary-color) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 1.2rem !important;
+  line-height: 1 !important;
+}
+
+.list-group-item:hover {
+  background-color: rgba(23, 162, 184, 0.1) !important;
+  padding-left: 1.5rem !important;
+}
+
+.badge-info {
+  background-color: var(--primary-color) !important;
+  font-family: var(--font-primary) !important;
+  font-weight: 500 !important;
+  padding: 0.4em 0.8em !important;
+  border-radius: 20px !important;
+  color: #fff !important;
+  box-shadow: 0 2px 5px rgba(23, 162, 184, 0.3) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.badge-info:hover {
+  background-color: #138496 !important;
+}
+
+.medication-list {
+  max-height: 200px !important;
+  overflow-y: auto !important;
+  padding: 15px !important;
+  border-radius: 8px !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  transition: box-shadow 0.3s ease !important;
+  scroll-behavior: smooth !important;
+}
+
+.medication-list:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.medication-list::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.medication-list::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+}
+
+.medication-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color) !important;
+  border-radius: 10px !important;
+  border: 2px solid #f1f1f1 !important;
+}
+
+.medication-list::-webkit-scrollbar-thumb:hover {
+  background-color: #138496 !important;
+}
+
+.calendar-dot {
+  background-color: #17a2b8 !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  margin: auto !important;
+  margin-top: 2px !important;
+}
+
+.react-calendar {
+  border: none !important;
+  font-family: var(--font-secondary) !important;
+}
+
+.react-calendar__tile--active {
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+.react-calendar__tile--now {
+  background: rgba(23, 162, 184, 0.1) !important;
+}
+
+.dog-profile-container {
+  /* Existing styles */
+  padding: 40px !important;
+}
+
+.list-group-item {
+  /* Improved spacing */
+  padding: 0.5rem 1rem !important;
+}
+
+.list-group-item .fa-paw {
+  /* Icon styling */
+  color: var(--primary-color) !important;
+}
+
+.medication-list .list-group-item {
+  /* Align items vertically */
+  display: flex !important;
+  align-items: center !important;
+}
+
+.medication-list .badge {
+  /* Enhance badge appearance */
+  font-size: 0.9rem !important;
+}
+
+.card-title .fa-bone,
+.card-title .fa-paw,
+.card-title .fa-heartbeat {
+  /* Icon styling in cards */
+  font-size: 1.2rem !important;
+}
+
+.shadow-sm {
+  /* Enhance shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.progress {
+  /* Rounded progress bars */
+  height: 20px !important;
+  border-radius: 10px !important;
+}
+
+.progress-bar {
+  /* Smooth animation */
+  transition: width 0.6s ease !important;
+}

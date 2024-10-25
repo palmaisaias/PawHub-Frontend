@@ -1,0 +1,186 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap');
+
+/* Global Styles */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #9c4141;
+}
+
+.main-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.padding-global {
+  padding: 20px;
+}
+
+.container-large {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.padding-section-large {
+  padding: 40px 0;
+}
+
+/* Payment Section Styles */
+.payment-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.payment3-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.layout25_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+.margin-small {
+  margin-bottom: 8px;
+}
+
+.hero-logo {
+  width: 72px;
+}
+
+.heading-10 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  color: #333;
+}
+
+.dog-name {
+  color: #ff6347;
+  font-family: 'Lobster', cursive;
+}
+
+.about4-growth_content-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-trust-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.avatar_group-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.hero-avatar-wrapper {
+  margin-right: 8px;
+}
+
+.hero-avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.f-header-avatar-text {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-awards-image {
+  margin-left: 16px;
+  width: 60px;
+}
+
+/* Pricing Card Styles */
+.layout25_image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-card {
+  background-color: #ede8e8;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 400px;
+  margin-left: 75px;
+  height: 400px;
+}
+
+.offer-wrapper {
+  margin-bottom: 16px;
+}
+
+.pricing-subheading {
+  font-size: 1.75rem;
+  color: #ff6347;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pricing-caption {
+  font-size: 1.25rem;
+  color: #777;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pricing-heading-h4 {
+  font-size: 2rem;
+  margin: 16px 0;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.hero-value-list3 {
+  margin-top: 16px;
+}
+
+.hero-value-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.pricing7_feature-icon-wrapper {
+  margin-right: 8px;
+}
+
+.icon-1x1-xsmall {
+  width: 24px;
+  height: 24px;
+}
+
+.pricing-tabs {
+  margin-top: 16px;
+}
+
+.pricing-button {
+  background-color: #ff6347;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pricing-button:hover {
+  background-color: #e5533d;
+}
