@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Form, Offcanvas } from 'react-bootstrap';
-import { FaEdit, FaSave, FaBars } from 'react-icons/fa';
+import { Container, Row, Col, Card, Button, Form, Offcanvas, Dropdown } from 'react-bootstrap';
+import { FaEdit, FaSave, FaBars, FaUser, FaCalendarAlt, FaClipboard, FaMapMarkedAlt, FaDog, FaCog, FaPlus } from 'react-icons/fa';
 import styled from 'styled-components';
 import './NewUserProfile.css';
 
@@ -11,6 +11,83 @@ const ProfileImage = styled.img`
   object-fit: cover;
   margin-bottom: 20px;
 `;
+
+function EnhancedOffcanvas({ showMenu, handleMenuToggle }) {
+  const [pets, setPets] = useState(['Buddy', 'Max', 'Charlie']);
+
+  return (
+    <Offcanvas show={showMenu} onHide={handleMenuToggle} placement="start">
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title>
+          <img src="/path/to/logo.png" alt="Logo" style={{ maxHeight: '50px' }} />
+        </Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body>
+        <ul className="list-unstyled">
+          {/* Top options */}
+          <li>
+            <Button variant="link" onClick={() => alert('Profile Clicked')} className="d-flex align-items-center">
+              <FaUser className="me-2" /> Profile
+            </Button>
+          </li>
+          <li>
+            <Button variant="link" onClick={() => alert('Calendar Clicked')} className="d-flex align-items-center">
+              <FaCalendarAlt className="me-2" /> Calendar
+            </Button>
+          </li>
+          <li>
+            <Button variant="link" onClick={() => alert('Medical Records Clicked')} className="d-flex align-items-center">
+              <FaClipboard className="me-2" /> Medical Records
+            </Button>
+          </li>
+          <li>
+            <Button variant="link" onClick={() => alert('Map Clicked')} className="d-flex align-items-center">
+              <FaMapMarkedAlt className="me-2" /> Map
+            </Button>
+          </li>
+
+          {/* First border */}
+          <hr />
+
+          {/* Pets dropdown */}
+          <li>
+            <Dropdown>
+              <Dropdown.Toggle variant="link" className="d-flex align-items-center">
+                <FaDog className="me-2" /> Pets
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                {pets.map((pet, index) => (
+                  <Dropdown.Item key={index} onClick={() => alert(`${pet} Clicked`)}>
+                    {pet}
+                  </Dropdown.Item>
+                ))}
+                <Dropdown.Divider />
+                <Dropdown.Item onClick={() => alert('Add Dog Clicked')} className="d-flex align-items-center">
+                  <FaPlus className="me-2" /> Add Dog
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </li>
+
+          {/* Second border */}
+          <hr />
+
+          {/* Settings and Logout */}
+          <li>
+            <Button variant="link" onClick={() => alert('Settings Clicked')} className="d-flex align-items-center">
+              <FaCog className="me-2" /> Settings
+            </Button>
+          </li>
+          <li>
+            <Button variant="link" onClick={() => alert('Logout Clicked')} className="d-flex align-items-center">
+              Logout
+            </Button>
+          </li>
+        </ul>
+      </Offcanvas.Body>
+    </Offcanvas>
+  );
+}
 
 const NewUserProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -48,36 +125,7 @@ const NewUserProfile = () => {
         <FaBars /> Menu
       </Button>
 
-      <Offcanvas show={showMenu} onHide={handleMenuToggle} placement="start">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Menu</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <ul className="list-unstyled">
-            <li>
-              <Button variant="link" onClick={() => alert('Profile Clicked')}>Profile</Button>
-            </li>
-            <li>
-              <Button variant="link" onClick={() => alert('Calendar Clicked')}>Calendar</Button>
-            </li>
-            <li>
-              <Button variant="link" onClick={() => alert('Medical Records Clicked')}>Medical Records</Button>
-            </li>
-            <li>
-              <Button variant="link" onClick={() => alert('Map Clicked')}>Map</Button>
-            </li>
-            <li>
-              <Button variant="link" onClick={() => alert('Pets Clicked')}>Pets</Button>
-            </li>
-            <li>
-              <Button variant="link" onClick={() => alert('Settings Clicked')}>Settings</Button>
-            </li>
-            <li>
-              <Button variant="link" onClick={() => alert('Logout Clicked')}>Logout</Button>
-            </li>
-          </ul>
-        </Offcanvas.Body>
-      </Offcanvas>
+      <EnhancedOffcanvas showMenu={showMenu} handleMenuToggle={handleMenuToggle} />
 
       <Container className="new-prof mt-5">
         <Row>
