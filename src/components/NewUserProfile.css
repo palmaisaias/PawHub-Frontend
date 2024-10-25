@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+
 body {
   background-color: #4187c5 !important; /* Light blue background */
 }
@@ -52,6 +55,7 @@ body {
 
 .offcanvas {
   width: 250px;
+  background-color: #ccccbb;
 }
 
 .list-unstyled {
@@ -60,4 +64,15 @@ body {
 
 .list-unstyled li {
   margin-bottom: 10px;
+}
+
+.me-2 {
+  color: #cba07a;
+  font-size: 24px;
+}
+
+.push-menu {
+  color: #312c32;
+  text-decoration: none;
+  font-family: 'Raleway';
 }

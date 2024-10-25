@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button, Form, Offcanvas, Dropdown } from 're
 import { FaEdit, FaSave, FaBars, FaUser, FaCalendarAlt, FaClipboard, FaMapMarkedAlt, FaDog, FaCog, FaPlus } from 'react-icons/fa';
 import styled from 'styled-components';
 import './NewUserProfile.css';
+import pawhub from '../assets/pawhub.png';
 
 const ProfileImage = styled.img`
   border-radius: 50%;
@@ -19,29 +20,29 @@ function EnhancedOffcanvas({ showMenu, handleMenuToggle }) {
     <Offcanvas show={showMenu} onHide={handleMenuToggle} placement="start">
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>
-          <img src="/path/to/logo.png" alt="Logo" style={{ maxHeight: '50px' }} />
+          <img src={pawhub} alt="Logo" style={{ maxHeight: '60px' }} />
         </Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <ul className="list-unstyled">
           {/* Top options */}
           <li>
-            <Button variant="link" onClick={() => alert('Profile Clicked')} className="d-flex align-items-center">
+            <Button variant="link" onClick={() => alert('Profile Clicked')} className="push-menu d-flex align-items-center">
               <FaUser className="me-2" /> Profile
             </Button>
           </li>
           <li>
-            <Button variant="link" onClick={() => alert('Calendar Clicked')} className="d-flex align-items-center">
+            <Button variant="link" onClick={() => alert('Calendar Clicked')} className="push-menu d-flex align-items-center">
               <FaCalendarAlt className="me-2" /> Calendar
             </Button>
           </li>
           <li>
-            <Button variant="link" onClick={() => alert('Medical Records Clicked')} className="d-flex align-items-center">
+            <Button variant="link" onClick={() => alert('Medical Records Clicked')} className="push-menu d-flex align-items-center">
               <FaClipboard className="me-2" /> Medical Records
             </Button>
           </li>
           <li>
-            <Button variant="link" onClick={() => alert('Map Clicked')} className="d-flex align-items-center">
+            <Button variant="link" onClick={() => alert('Map Clicked')} className="push-menu d-flex align-items-center">
               <FaMapMarkedAlt className="me-2" /> Map
             </Button>
           </li>
@@ -52,7 +53,7 @@ function EnhancedOffcanvas({ showMenu, handleMenuToggle }) {
           {/* Pets dropdown */}
           <li>
             <Dropdown>
-              <Dropdown.Toggle variant="link" className="d-flex align-items-center">
+              <Dropdown.Toggle variant="link" className="push-menu d-flex align-items-center">
                 <FaDog className="me-2" /> Pets
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -74,7 +75,7 @@ function EnhancedOffcanvas({ showMenu, handleMenuToggle }) {
 
           {/* Settings and Logout */}
           <li>
-            <Button variant="link" onClick={() => alert('Settings Clicked')} className="d-flex align-items-center">
+            <Button variant="link" onClick={() => alert('Settings Clicked')} className="push-menu d-flex align-items-center">
               <FaCog className="me-2" /> Settings
             </Button>
           </li>
