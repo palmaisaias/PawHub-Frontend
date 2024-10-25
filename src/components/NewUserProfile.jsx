@@ -122,7 +122,7 @@ const NewUserProfile = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleMenuToggle} className="mb-3">
+      <Button onClick={handleMenuToggle} className="hidden-menu mb-3">
         <FaBars /> Menu
       </Button>
 

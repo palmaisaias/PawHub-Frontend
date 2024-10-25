@@ -2,17 +2,17 @@
 
 
 body {
-  background-color: #4187c5 !important; /* Light blue background */
+  background-color:#cba07a !important; /* Light blue background */
 }
 
 .new-prof {
-  background-color: #2d7abe !important; /* Matches the body color */
+  background-color:#cba07a !important; /* Matches the body color */
   padding: 20px;
 }
 
 .container {
   margin-top: 20px;
-  background-color: #2c6495 !important; /* Replace with your desired color */
+  background-color:#ccccbb !important; /* Replace with your desired color */
 }
 
 .profile-image {
@@ -56,6 +56,11 @@ body {
 .offcanvas {
   width: 250px;
   background-color: #ccccbb;
+}
+
+.hidden-menu {
+  background-color:#312c32;
+  border: none;
 }
 
 .list-unstyled {
