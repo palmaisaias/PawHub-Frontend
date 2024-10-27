@@ -23,7 +23,7 @@ const OwnerForm = () => {
     console.log('Sending data to backend:', formData);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/owner/', {
+      const response = await fetch('http://127.0.0.1:5001/owner/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ const OwnerForm = () => {
       });
 
       if (response.ok) {
-        alert('Form submitted successfully!');
+        alert('Welcome to DogApp!');
       } else {
         alert('Failed to submit the form.');
       }

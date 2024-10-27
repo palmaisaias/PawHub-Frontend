@@ -1,9 +1,29 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Form, Offcanvas, Dropdown } from 'react-bootstrap';
-import { FaEdit, FaSave, FaBars, FaUser, FaCalendarAlt, FaClipboard, FaMapMarkedAlt, FaDog, FaCog, FaPlus } from 'react-icons/fa';
-import styled from 'styled-components';
-import './NewUserProfile.css';
-import pawhub from '../assets/pawhub.png';
+import React, { useState } from "react";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  Form,
+  Offcanvas,
+  Dropdown,
+} from "react-bootstrap";
+import {
+  FaEdit,
+  FaSave,
+  FaBars,
+  FaUser,
+  FaCalendarAlt,
+  FaClipboard,
+  FaMapMarkedAlt,
+  FaDog,
+  FaCog,
+  FaPlus,
+} from "react-icons/fa";
+import styled from "styled-components";
+import "./NewUserProfile.css";
+import pawhub from "../assets/pawhub.png";
 
 const ProfileImage = styled.img`
   border-radius: 50%;
@@ -14,35 +34,51 @@ const ProfileImage = styled.img`
 `;
 
 function EnhancedOffcanvas({ showMenu, handleMenuToggle }) {
-  const [pets, setPets] = useState(['Buddy', 'Max', 'Charlie']);
+  const [pets, setPets] = useState(["Buddy", "Max", "Charlie"]);
 
   return (
     <Offcanvas show={showMenu} onHide={handleMenuToggle} placement="start">
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>
-          <img src={pawhub} alt="Logo" style={{ maxHeight: '60px' }} />
+          <img src={pawhub} alt="Logo" style={{ maxHeight: "60px" }} />
         </Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <ul className="list-unstyled">
           {/* Top options */}
           <li>
-            <Button variant="link" onClick={() => alert('Profile Clicked')} className="push-menu d-flex align-items-center">
+            <Button
+              variant="link"
+              onClick={() => alert("Profile Clicked")}
+              className="push-menu d-flex align-items-center"
+            >
               <FaUser className="me-2" /> Profile
             </Button>
           </li>
           <li>
-            <Button variant="link" onClick={() => alert('Calendar Clicked')} className="push-menu d-flex align-items-center">
+            <Button
+              variant="link"
+              onClick={() => alert("Calendar Clicked")}
+              className="push-menu d-flex align-items-center"
+            >
               <FaCalendarAlt className="me-2" /> Calendar
             </Button>
           </li>
           <li>
-            <Button variant="link" onClick={() => alert('Medical Records Clicked')} className="push-menu d-flex align-items-center">
+            <Button
+              variant="link"
+              onClick={() => alert("Medical Records Clicked")}
+              className="push-menu d-flex align-items-center"
+            >
               <FaClipboard className="me-2" /> Medical Records
             </Button>
           </li>
           <li>
-            <Button variant="link" onClick={() => alert('Map Clicked')} className="push-menu d-flex align-items-center">
+            <Button
+              variant="link"
+              onClick={() => alert("Map Clicked")}
+              className="push-menu d-flex align-items-center"
+            >
               <FaMapMarkedAlt className="me-2" /> Map
             </Button>
           </li>
@@ -53,17 +89,26 @@ function EnhancedOffcanvas({ showMenu, handleMenuToggle }) {
           {/* Pets dropdown */}
           <li>
             <Dropdown>
-              <Dropdown.Toggle variant="link" className="push-menu d-flex align-items-center">
+              <Dropdown.Toggle
+                variant="link"
+                className="push-menu d-flex align-items-center"
+              >
                 <FaDog className="me-2" /> Pets
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 {pets.map((pet, index) => (
-                  <Dropdown.Item key={index} onClick={() => alert(`${pet} Clicked`)}>
+                  <Dropdown.Item
+                    key={index}
+                    onClick={() => alert(`${pet} Clicked`)}
+                  >
                     {pet}
                   </Dropdown.Item>
                 ))}
                 <Dropdown.Divider />
-                <Dropdown.Item onClick={() => alert('Add Dog Clicked')} className="d-flex align-items-center">
+                <Dropdown.Item
+                  onClick={() => alert("Add Dog Clicked")}
+                  className="d-flex align-items-center"
+                >
                   <FaPlus className="me-2" /> Add Dog
                 </Dropdown.Item>
               </Dropdown.Menu>
@@ -75,12 +120,20 @@ function EnhancedOffcanvas({ showMenu, handleMenuToggle }) {
 
           {/* Settings and Logout */}
           <li>
-            <Button variant="link" onClick={() => alert('Settings Clicked')} className="push-menu d-flex align-items-center">
+            <Button
+              variant="link"
+              onClick={() => alert("Settings Clicked")}
+              className="push-menu d-flex align-items-center"
+            >
               <FaCog className="me-2" /> Settings
             </Button>
           </li>
           <li>
-            <Button variant="link" onClick={() => alert('Logout Clicked')} className="logout-menu d-flex align-items-center">
+            <Button
+              variant="link"
+              onClick={() => alert("Logout Clicked")}
+              className="logout-menu d-flex align-items-center"
+            >
               logout
             </Button>
           </li>
@@ -94,17 +147,17 @@ const NewUserProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [profileData, setProfileData] = useState({
-    name: 'RoboDog',
-    age: '3 years',
-    breed: 'Golden Retriever',
-    gender: 'Male',
-    weight: '30 kg',
-    spayed: 'Yes',
-    microchip: '1234567890',
-    vetClinic: 'Happy Tails Vet Clinic',
-    vetDoctor: 'Dr. Emily Ross',
-    clinicPhone: '(123) 456-7890',
-    clinicEmail: 'happyvets@example.com'
+    name: "RoboDog",
+    age: "3 years",
+    breed: "Golden Retriever",
+    gender: "Male",
+    weight: "30 kg",
+    spayed: "Yes",
+    microchip: "1234567890",
+    vetClinic: "Happy Tails Vet Clinic",
+    vetDoctor: "Dr. Emily Ross",
+    clinicPhone: "(123) 456-7890",
+    clinicEmail: "happyvets@example.com",
   });
 
   const handleEditToggle = () => {
@@ -126,14 +179,22 @@ const NewUserProfile = () => {
         <FaBars /> Menu
       </Button>
 
-      <EnhancedOffcanvas showMenu={showMenu} handleMenuToggle={handleMenuToggle} />
+      <EnhancedOffcanvas
+        showMenu={showMenu}
+        handleMenuToggle={handleMenuToggle}
+      />
 
       <Container className="new-prof mt-5">
         <Row>
           <Col md={3} className="text-center">
-            <ProfileImage src="https://cdn-icons-png.flaticon.com/512/5094/5094257.png" alt="RoboDog" />
-            <Button variant="outline-light" onClick={handleEditToggle}>
-              {isEditing ? <FaSave /> : <FaEdit />} {isEditing ? 'Save' : 'Edit'}
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/018/871/732/small_2x/cute-and-happy-dog-png.png"
+              alt="RoboDog"
+              className="profile-image"
+            />
+            <Button className="edit-image" variant="outline-light" onClick={handleEditToggle}>
+              {isEditing ? <FaSave /> : <FaEdit />}{" "}
+              {isEditing ? "Save" : "Edit"}
             </Button>
           </Col>
           <Col md={9}>
