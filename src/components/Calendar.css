@@ -1,0 +1,90 @@
+/* Calendar.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+body {
+  background-color: #cba07a !important;
+}
+
+.calendar-page {
+  display: flex;
+  padding: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.calendar-main {
+  flex: 3;
+  padding: 20px;
+  background-color: #fff1de;
+  border-radius: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-sidebar {
+  flex: 1;
+  margin-left: 20px;
+  background-color: #ccccbb;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.calendar-offcanvas {
+  width: 250px;
+  background-color: #ccccbb;
+}
+
+.hidden-menu {
+  background-color: #312c32;
+  border: none;
+  color: #fff1de;
+  margin-bottom: 20px;
+}
+
+.list-unstyled {
+  padding-left: 0;
+}
+
+.list-unstyled li {
+  margin-bottom: 10px;
+}
+
+.push-menu {
+  color: #312c32;
+  text-decoration: none;
+  font-family: 'Raleway';
+}
+
+.push-menu:hover {
+  color: #fff1de;
+}
+
+.logout-menu {
+  color: brown;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Raleway';
+}
+
+.logout-menu:hover {
+  color: #fff1de;
+}
+
+.add-event-form {
+  margin-top: 20px;
+  background-color: #fff1de;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-event-button {
+  background-color: #312c32;
+  border: none;
+  font-family: 'Raleway';
+  color: #fff1de;
+}
+
+.add-event-button:hover {
+  background-color: #fff1de;
+  color: #312c32;
+}

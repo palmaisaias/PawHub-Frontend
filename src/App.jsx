@@ -6,6 +6,7 @@ import OwnerProfile from './components/ownerProfile';
 import DogAppLogin from './components/DogAppLogin';
 import LandingPage from './components/LandingPage';
 import NewUserProfile from './components/NewUserProfile';
+import Calendar from './components/Calendar';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<DogAppLogin />} />
           <Route path="/landing" element={<LandingPage />} />
           <Route path="/new-user" element={<NewUserProfile />} />
+          <Route path="/calendar" element={<Calendar />} />
         </Routes>
       </div>
     </Router>
@@ -46,6 +48,9 @@ const Home = () => (
     </p>
     <p>
       <Link to="/new-user">Go to New User</Link>
+    </p>
+    <p>
+      <Link to="/calendar">Go to Calendar</Link>
     </p>
   </div>
 );
