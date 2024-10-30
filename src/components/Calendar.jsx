@@ -26,8 +26,9 @@ function Calendar() {
     const form = e.target;
     const title = form.elements["title"].value;
     const date = form.elements["date"].value;
+    const time = form.elements["time"].value;
     if (title && date) {
-      setEvents([...events, { title, date }]);
+      setEvents([...events, { title, date, time }]);
     }
     form.reset();
   };
@@ -73,6 +74,10 @@ function Calendar() {
               <Form.Label>Event Date</Form.Label>
               <Form.Control type="date" name="date" required />
             </Form.Group>
+            <Form.Group className="mb-3" controlId="eventTime">
+              <Form.Label>Event Time</Form.Label>
+              <Form.Control type="time" name="time" required />
+            </Form.Group>
             <Button variant="primary" type="submit" className="add-event-button">
               Add Event
             </Button>
@@ -88,7 +93,7 @@ function Calendar() {
           {modalInfo.events && modalInfo.events.length > 0 ? (
             <ul>
               {modalInfo.events.map((event, index) => (
-                <li key={index}>{event.title}</li>
+                <li key={index}>{event.title} at {event.time}</li>
               ))}
             </ul>
           ) : (
