@@ -1,6 +1,6 @@
 /* Calendar.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
 
 body {
   background-color: #cba07a !important;
@@ -9,7 +9,7 @@ body {
 .calendar-page {
   display: flex;
   padding: 20px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .calendar-main {
@@ -51,7 +51,7 @@ body {
 .push-menu {
   color: #312c32;
   text-decoration: none;
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 .push-menu:hover {
@@ -62,7 +62,7 @@ body {
   color: brown;
   text-decoration: none;
   font-weight: 600;
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 .logout-menu:hover {
@@ -80,7 +80,7 @@ body {
 .add-event-button {
   background-color: #312c32;
   border: none;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   color: #fff1de;
 }
 
@@ -101,14 +101,14 @@ body {
 }
 
 .modal-title {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 700;
   font-size: 1.5rem;
   color: #312c32;
 }
 
 .modal-body {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 1rem;
   color: #312c32;
 }
@@ -126,4 +126,67 @@ body {
 .modal-footer .btn-secondary:hover {
   background-color: #fff1de;
   color: #312c32;
+}
+
+/* 430x932 Screen Optimization */
+@media (max-width: 430px) {
+  .calendar-page {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .calendar-main {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .calendar-sidebar {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .hidden-menu {
+    font-size: 1rem;
+    width: 100%;
+    padding: 8px;
+  }
+
+  .add-event-form {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+
+  .add-event-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .modal-body {
+    font-size: 0.95rem;
+  }
+
+  .modal-footer .btn-secondary {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .list-unstyled {
+    font-size: 0.9rem;
+  }
+
+  .list-unstyled li {
+    margin-bottom: 8px;
+  }
+
+  .push-menu,
+  .logout-menu {
+    font-size: 0.9rem;
+  }
 }
